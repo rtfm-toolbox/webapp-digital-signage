@@ -1,0 +1,42 @@
+
+.header {
+    display: flex;
+    align-content: space-between;
+    align-items: space-between;
+    justify-content: space-between;
+
+    font-size:  2rem;
+    margin-bottom: 2rem;
+}
+
+.card-list {
+    .card-list-header {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    .card-list-sub-header {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+
+
+    .cards {
+        display: flex;
+        justify-content: space-between;
+
+        .card {
+            width: 25%;
+            background: rgba(255, 255, 255, 0.3);
+
+            img {
+                width: 100%;
+            }
+
+            .card-body {
+                padding: 1rem;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

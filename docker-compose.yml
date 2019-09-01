@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  webapp-digital-signage:
+    build: .
+    restart: always
+    labels:
+      - traefik.frontend.rule=Host:signage.${toolbox_base_url}
+      - traefik.docker.network=traefik_net
+      - traefik.enable=true
+      - traefik.port=80
+    networks:
+      - traefik_net
+
+networks:
+  traefik_net:
+    external: true
