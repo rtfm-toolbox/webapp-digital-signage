@@ -1,9 +1,8 @@
 
 <div class="header">
   <img src="./../assets/maker-space.svg" />
-  <span>
-    Der Maker Space hat aktuell geschlossen
-  </span>
+  <span *ngIf="blubber">Der Maker Space hat aktuell geöffnet</span>
+  <span *ngIf="!blubber">Der Maker Space hat aktuell geschlossen</span>
 </div>
 
 <div class="card-list">
