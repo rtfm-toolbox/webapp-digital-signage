@@ -18,8 +18,8 @@ export class AppComponent implements OnInit {
       if (
         moment().weekday() != 1 &&
         moment().weekday() != 7 &&
-        moment().hour() > 15 &&
-        moment().hour() < 24) {
+        moment().hour() > 14 &&
+        moment().hour() < 22) {
         this.blubber = true;
       } else {
         this.blubber = false;
