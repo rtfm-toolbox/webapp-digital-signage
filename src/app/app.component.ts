@@ -10,6 +10,8 @@ export class AppComponent implements OnInit {
   title = 'webapp-digital-signage';
   content = '';
   blubber = false;
+  screen = 0;
+  screensCount = 2;
 
   ngOnInit(): void {
     setInterval(() => {
@@ -25,6 +27,11 @@ export class AppComponent implements OnInit {
         this.blubber = false;
       }
     }, 1000);
+
+    setInterval(() => {
+      this.screen++;
+      this.screen = this.screen % this.screensCount;
+    }, 30000);
   }
 
 }
