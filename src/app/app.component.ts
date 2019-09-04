@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
     setInterval(() => {
       this.screen++;
       this.screen = this.screen % this.screensCount;
-    }, 30000);
+    }, 3000);
   }
 
 }
