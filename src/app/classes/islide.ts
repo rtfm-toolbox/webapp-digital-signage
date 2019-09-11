@@ -1,7 +1,13 @@
+
+
+export enum SlideTypes {
+    TextImage = 1,
+    Cards = 2
+}
+
 export interface ISlide {
     // returns displayable html code
-    run(): string;
-
-    // time in millis, the slide should be displayed
+    screen: string;
+    screentype: SlideTypes;
     duration: number;
 }

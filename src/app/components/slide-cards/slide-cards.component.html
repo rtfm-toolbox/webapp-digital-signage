@@ -1,0 +1,18 @@
+
+<div class="card-list">
+    <div class="card-list-header">{{ slide.title }}</div>
+    <div class="card-list-sub-header">{{ slide.subtitle }}</div>
+  
+    <div class="cards" *ngIf="slide && slide.cards">
+  
+      <div class="card" *ngFor="let card of slide.cards">
+        <img [src]="card.image" />
+        <div class="card-body">
+          <h2>{{ card.title }}</h2>
+          <h3 class="card-sub">{{ card.subtitle }}</h3>
+          <div class="card-content">{{ card.text }}</div>
+        </div>
+      </div>
+  
+    </div>
+  </div>

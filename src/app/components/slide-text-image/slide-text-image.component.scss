@@ -1,0 +1,13 @@
+.text-image-container {
+    display: flex;
+
+    .text-image-content {
+        
+        font-size: 2rem;
+    }
+
+    img {
+        max-width: 50%;
+        min-width: 50%;
+    }
+}
