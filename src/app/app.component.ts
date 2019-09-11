@@ -5,7 +5,6 @@ import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firest
 import { map } from 'rxjs/operators';
 import { Monitor } from './classes/monitor';
 import { Observable } from 'rxjs';
-import { clearTimeout } from 'timers';
 
 @Component({
   selector: 'app-root',
@@ -35,7 +34,9 @@ export class AppComponent implements OnInit {
     this.monitorDoc = this.db.doc<Monitor>('signage-monitor/' + this.screenid);
     this.monitorObs = this.monitorDoc.valueChanges();
     this.monitorObs.subscribe(m => {
-      clearTimeout(this.timer);
+      if (this.timer) {
+        clearTimeout(this.timer);
+      }
 
       this.monitor = m;
       this.monitor.slides.forEach(s => {
